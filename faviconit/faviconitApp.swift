@@ -15,5 +15,6 @@ struct faviconitApp: App {
         }
         .defaultSize(width: 560, height: 650)
         .windowResizability(.contentMinSize)
+        .windowStyle(.hiddenTitleBar)
     }
 }

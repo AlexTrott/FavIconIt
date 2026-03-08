@@ -20,15 +20,20 @@ struct ContentView: View {
             switch appState {
             case .dropZone:
                 DropZoneView { result in
-                    appState = .preview(result)
+                    withAnimation(.spring(response: 0.4, dampingFraction: 0.85)) {
+                        appState = .preview(result)
+                    }
                 }
             case .preview(let result):
                 PreviewView(result: result) {
-                    appState = .dropZone
+                    withAnimation(.spring(response: 0.4, dampingFraction: 0.85)) {
+                        appState = .dropZone
+                    }
                 }
             }
         }
         .frame(minWidth: 480, idealWidth: 560, minHeight: 400, idealHeight: 650)
+        .background(.ultraThinMaterial)
     }
 }
 
