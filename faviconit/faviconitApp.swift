@@ -13,7 +13,7 @@ struct faviconitApp: App {
         WindowGroup {
             ContentView()
         }
-        .windowResizability(.contentSize)
-        .defaultSize(width: 500, height: 600)
+        .defaultSize(width: 560, height: 650)
+        .windowResizability(.contentMinSize)
     }
 }

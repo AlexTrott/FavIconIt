@@ -28,7 +28,7 @@ struct ContentView: View {
                 }
             }
         }
-        .frame(width: 500, height: 600)
+        .frame(minWidth: 480, idealWidth: 560, minHeight: 400, idealHeight: 650)
     }
 }
 
